@@ -1,0 +1,99 @@
+.sectionEducation{
+    padding: 0 10vw 10vw 10vw;
+    background: #E8ECF3;
+    h2{
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 44px;
+        color: #113149;
+        text-align: left;
+        margin-bottom: 64px;
+    }
+    .sectionEducation--edContainer{
+        max-width: 50%;
+        height: 400px;
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 2fr 1fr 2.5fr;
+        justify-items: center;
+        padding: 0;
+        .timeLine{
+            width: 558px;
+            height: 25px;
+        }
+        .sectionEducation--edContainer__logo{
+            display:flex; 
+            flex-direction: column; 
+            align-items: center;
+            position:relative;
+            .pin{
+                position:absolute;
+                height: 30px;
+                bottom: 115%;
+            }
+        }
+        .sectionEducation--edContainer__title{
+            display:flex; 
+            align-items: center;
+            justify-content: center;
+            .pin{
+                margin: 10px;
+                height: 24px;
+            }
+        }
+        h3{
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            margin:0;
+        }
+        h4{
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 27px;
+            text-align: center;
+        }
+        p{
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 31px;
+            color: #537895;
+        }
+    }
+    .certificationsTitle{
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 44px;
+        color: black;
+    }
+    .sectionEducation--certificationContainer{
+        display: flex;
+        gap: 35px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 19px;
+        box-shadow: 0px -4px 20px rgba(19, 50, 74, 0.26);
+        div{
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h3{
+                font-weight: bold;
+                font-size: 28px;
+                line-height: 37px;
+            }
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sectionEducation{
+        .sectionEducation--edContainer{
+            max-width: none;
+        }
+    }
+}

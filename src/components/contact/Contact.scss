@@ -1,0 +1,68 @@
+.sectionContact{
+    background: linear-gradient(180deg, rgba(214, 201, 222, 0) 0%, rgba(83, 120, 149, 0.1) 100%);
+    padding: 22vh 10vw 10vw 10vw;
+    text-align: left;
+    h2{
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 44px;
+        color: #18334C;
+        margin-bottom: 77px;
+    }
+    svg{
+        margin: 0 50px 100px 0;
+        path{
+            color: #09203F;
+        }
+    }
+    h3{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 37px;
+        color: #18334C;
+        margin-bottom: 50px;
+    }
+    form{
+        background: linear-gradient(180deg, rgba(214, 201, 222, 0) 0%, rgba(83, 120, 149, 0.1) 100%);
+        border: 1px solid #537895;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 6px 4px rgba(136, 129, 129, 0.25);
+        border-radius: 40px;
+        padding: 70px 50px;
+        label{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            color: #13344F;
+        }
+        input, textarea{
+            border: none;
+            border-bottom: 2px solid #537895;
+            background: transparent;
+            border-radius: 0;
+        }
+        .row:nth-child(2){
+            margin: 100px 0 100px 0;
+        }
+        button{
+            background: linear-gradient(180deg, #537895 0%, #09203F 100%);
+            border-radius: 20px;
+            width:183px;
+            height:50px;
+            color:white;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    }
+    p{
+        margin-top: 100px;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 37px;
+        color: #000000;
+        text-align: center;
+    }
+}

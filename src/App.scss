@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  .backgroundBlue{
+    padding-top: 18vh;
+    background: linear-gradient(180deg, #537895 0%, #09203F 100%);
+    .backgroundImage{
+      background-image: url('./assets/background-home.png');
+      background-repeat: no-repeat;
+      background-position-x: 54vw;
+      background-position-y: 4vh;
+    }
+  }
+}

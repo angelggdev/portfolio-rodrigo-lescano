@@ -1,0 +1,39 @@
+.homeContainer{
+    text-align: left;
+    width: 45vw;
+    padding-top: 16vh;
+    padding-left: 10vw;
+    display:flex;
+    flex-direction: column;
+    color:white;
+    h1{
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 75px;
+    }
+    h2{
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 37px;
+    }
+    p{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        margin-top: 15vh;
+    }
+    .homeContainer--link{
+        align-self: center;
+        animation: MoveUpDown 1s linear infinite;
+    }
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+}

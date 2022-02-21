@@ -1,0 +1,49 @@
+.sectionAbout{
+    padding-top: 18vh;
+    color:white;
+    min-height: 100vh;
+    .container-fluid{
+        gap: 50px;
+        padding-left: 4vw;
+        .imageContainer{
+            padding-top:30px;
+            img{
+                height: 330px;
+                border-radius: 20px;
+            }
+        }
+        .sectionAbout--text{
+            width: 686px;
+            height: 254px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: left;
+            padding-top: 30px;
+        }
+        .sectionAbout--text__download{
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 20px;
+            width: 217px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 45px;
+            a{
+                text-decoration: none;
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+    }
+    h2{
+        padding-left: 10vw;
+        text-align: left;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 44px;
+    }
+}
