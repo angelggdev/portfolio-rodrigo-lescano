@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import './Home.scss';
 import Arrow from '../../assets/arrow-down.png';
-import AboutMe from '../about-me/AboutMe';
 
 function Home() {
     return (

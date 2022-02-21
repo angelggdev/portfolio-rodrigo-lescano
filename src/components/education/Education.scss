@@ -94,6 +94,10 @@
     .sectionEducation{
         .sectionEducation--edContainer{
             max-width: none;
+            .timeLine{
+                width: auto;
+                height: auto;
+            }
         }
     }
 }

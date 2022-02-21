@@ -47,3 +47,14 @@
         line-height: 44px;
     }
 }
+
+@media (max-width: 600px) {
+    .sectionAbout{
+        .container-fluid{
+            .sectionAbout--text{
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

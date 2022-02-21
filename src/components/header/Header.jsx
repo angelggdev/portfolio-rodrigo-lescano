@@ -15,23 +15,20 @@ function Header() {
                     <Nav.Link href="#projects">Projects</Nav.Link>
                     <Nav.Link href="#contact">Contact</Nav.Link>
                 </Nav>
-                {/* <Navbar.Toggle aria-controls="offcanvasNavbar"/>
+                <Navbar.Toggle className='menuButton' aria-controls="offcanvasNavbar"/>
                 <Navbar.Offcanvas
                     id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel"
                     placement="end"
                 >
-                    <Offcanvas.Body>
+                    <Offcanvas.Body className='offCanvasBody'>
                         <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link href="/about-me">About me</Nav.Link>
-                            <Nav.Link href="/work-experience">Work experience</Nav.Link>
-                            <Nav.Link href="/education">Education</Nav.Link>
-                            <Nav.Link href="/skills">Skills</Nav.Link>
-                            <Nav.Link href="/projects">Projects</Nav.Link>
-                            <Nav.Link href="/contact">Contact</Nav.Link>
+                            <Nav.Link href="#about-me">About Me</Nav.Link>
+                            <Nav.Link href="#projects">Projects</Nav.Link>
+                            <Nav.Link href="#contact">Contact</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
-                </Navbar.Offcanvas> */}
+                </Navbar.Offcanvas>
             </Container>
             <div className='navBorder'></div>
         </Navbar>
