@@ -1,5 +1,13 @@
+@use 'sass:math';
+
+$padding-top: 18vh;
+$img-height: 330px;
+$font-size-text: 20px;
+$font-size-download: 20px;
+$font-size-h2: 35px;
+
 .sectionAbout{
-    padding-top: 18vh;
+    padding-top: $padding-top;
     color:white;
     min-height: 100vh;
     .container-fluid{
@@ -8,14 +16,14 @@
         .imageContainer{
             padding-top:30px;
             img{
-                height: 330px;
+                height: $img-height;
                 border-radius: 20px;
             }
         }
         .sectionAbout--text{
             width: 686px;
             height: 254px;
-            font-size: 20px;
+            font-size: $font-size-text;
             line-height: 25px;
             text-align: left;
             padding-top: 30px;
@@ -34,7 +42,7 @@
                 text-decoration: none;
                 color:white;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: $font-size-download;
                 line-height: 25px;
             }
         }
@@ -43,18 +51,37 @@
         padding-left: 10vw;
         text-align: left;
         font-weight: bold;
-        font-size: 35px;
+        font-size: $font-size-h2;
         line-height: 44px;
     }
 }
 
 @media (max-width: 600px) {
     .sectionAbout{
+        padding-top: math.div($padding-top,2);
         .container-fluid{
-            .sectionAbout--text{
-                width: auto;
-                height: auto;
+            .imageContainer{
+                img{
+                    height: math.div($img-height,1.2);
+                }
             }
+            .textContainer{
+                padding-bottom: 30px;
+            }
+            .sectionAbout--text{
+                width: 80vw;
+                height: auto;
+                font-size: math.div($font-size-text,1.2);
+                padding-left:20px;
+            }
+            .sectionAbout--text__download{
+                a{
+                    font-size: math.div($font-size-download,1.2);
+                }
+            }
+        }
+        h2{
+            font-size: math.div($font-size-h2,1.2);
         }
     }
 }

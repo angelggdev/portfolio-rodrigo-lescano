@@ -42,3 +42,9 @@
         max-width: 68%;
     }
 }
+
+@media (max-width:600px) {
+    .sectionSkills{
+        padding: 0 5vw 10vw 5vw;
+    }
+}
