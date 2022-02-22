@@ -50,3 +50,20 @@
         }
     }
 }
+
+@media (max-width:600px){
+    .detailsModal{
+        div{
+            .modal-content{
+                .modal-body{
+                    ul{
+                        text-align: left;
+                        li{
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
