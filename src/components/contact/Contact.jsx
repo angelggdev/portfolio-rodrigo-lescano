@@ -18,27 +18,33 @@ function Contact() {
       <IoLogoGithub size={'80px'} />
       <IoMdMail size={'80px'} />
       <h3>Complete the form and I will contact you!</h3>
-      <Container fluid as={Form}>
+      {/* cambiar email por email de rodrigo */}
+      <Container
+        fluid
+        as={Form}
+        action="https://formsubmit.co/angelggdev@gmail.com"
+        method="POST"
+      >
         <Row className="mb-3">
           <Form.Group as={Col} className="mb-3" controlId="formBasicText">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" size="lg" />
+            <Form.Control type="text" size="lg" name="firstName" />
           </Form.Group>
           <Form.Group as={Col} className="mb-3" controlId="formBasicText">
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" size="lg" />
+            <Form.Control type="text" size="lg" name="lastName" />
           </Form.Group>
         </Row>
         <Row>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>E-mail</Form.Label>
-            <Form.Control type="email" size="lg" />
+            <Form.Control type="email" size="lg" name="email" />
           </Form.Group>
         </Row>
         <Row>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" rows={3} size="lg" />
+            <Form.Control as="textarea" rows={3} size="lg" name="message" />
           </Form.Group>
         </Row>
         <Row>
@@ -48,7 +54,14 @@ function Contact() {
         </Row>
       </Container>
       <p>THANK YOU!</p>
-      {/* Animación */}
+      <lottie-player
+        src="https://assets4.lottiefiles.com/temp/lf20_A3XZxc.json"
+        background="transparent"
+        speed="1"
+        style={{ width: '300px', height: '300px', margin:'0 auto 0 auto'}}
+        loop
+        autoplay
+      ></lottie-player>
     </section>
   );
 }
