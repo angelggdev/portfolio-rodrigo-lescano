@@ -110,19 +110,9 @@ $font-size-h2: 35px;
             font-size: math.div($font-size-h2, 1.2);
         }
         .sectionEducation--certificationContainer{
+            margin-bottom: 50px;
             div{
                 text-align: left;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                h3{
-                    font-weight: bold;
-                    font-size: 28px;
-                    line-height: 37px;
-                }
-                p{
-                    font-weight: bold;
-                }
             }
         }
         .sectionEducation--certificationContainer{
