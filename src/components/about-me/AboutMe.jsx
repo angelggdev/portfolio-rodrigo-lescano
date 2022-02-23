@@ -8,10 +8,10 @@ function AboutMe() {
       <h2>ABOUT ME</h2>
       <Container fluid>
         <Row>
-          <Col xs={12} lg={4} className="imageContainer">
+          <Col sm={12} md={5} className="imageContainer">
             <img src={ProfilePic} alt="Rodrigo Lescano" />
           </Col>
-          <Col xs={12} lg={8} className="textContainer">
+          <Col sm={12} md={7} className="textContainer">
             <div className="sectionAbout--text">
               <p>
                 I'm working as an Unix Linux Administrator.

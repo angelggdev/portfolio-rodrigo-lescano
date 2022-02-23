@@ -88,3 +88,16 @@ $font-size-h2:35px;
         width:80vw;
     }
 }
+
+@media (min-width:601px) and (max-width: 1200px) {
+    .sectionWorkExp{
+        .sectionWorkExp--workExpContainer{
+            max-width: 33%;
+            height: 477px;
+            grid-template-rows: 0.5fr 1fr 2fr 1fr 4fr 1fr;
+        }
+    }
+    .timeLine{
+        width:100%;
+    }
+}
