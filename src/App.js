@@ -9,6 +9,7 @@ import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 
 function App() {
+
   const wavyEffect = (bgColor, fillColor) => {
     return (
       <div style={{ height: '150px', overflow: 'hidden' }}>

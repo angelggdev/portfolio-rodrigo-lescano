@@ -4,15 +4,16 @@ $font-size-brand: 25px;
 $height: 18vh;
 
 .navbar{
-    background: linear-gradient(180deg, rgba(9, 32, 63, 0.95) 0%, rgba(83, 120, 149, 0.95) 100%);
     position:fixed !important;
     width: 100%;
     padding-bottom: 0;
-    background-color: rgba(0,0,0,0) !important;
-    height: $height;
+    padding-top: 0;
     z-index: 1;
     align-items: flex-end;
+    background-color: rgba(0,0,0,0) !important;
     .container-fluid{
+        background: linear-gradient(180deg, rgba(9, 32, 63, 0.95) 0%, rgba(83, 120, 149, 0.95) 100%);
+        height: $height;
         padding-left: 0;
         .navBar--links{
             display:flex;
@@ -27,10 +28,7 @@ $height: 18vh;
             }
         }
         .menuButton{
-            display:none !important;
-        }
-        #offcanvasNavbar{
-            display:none !important;
+            display:none;
         }
     }
     .navBar--brand{
@@ -45,20 +43,28 @@ $height: 18vh;
         width: 100%;
         align-self:flex-end;
     }
+    .mobileMenu{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        background: rgba(83, 120, 149, 0.95);
+        a{
+            font-weight: bold;
+        }
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .navbar{
-        height: math.div($height,1.5);
         .container-fluid{
-            .menuButton{
-                display: block !important;
-            }
-            #offcanvasNavbar{
-                display: block !important;
-            }
+            height: math.div($height,1.5);
             .navBar--links{
                 display:none !important;
+            }
+            .menuButton{
+                display:block;
+                cursor: pointer;
             }
         }
         .navBar--brand{
@@ -67,15 +73,5 @@ $height: 18vh;
     }
     .offcanvas-end{
         width:50vw;
-    }
-    .offCanvasBody{
-        background-color: #537895;
-        a{
-            text-decoration: none;
-            color:white;
-            font-weight: normal;
-            font-size: 22px;
-            line-height: 27px;
-        }
     }
 }
