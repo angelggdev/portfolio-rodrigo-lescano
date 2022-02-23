@@ -55,10 +55,10 @@ function Contact() {
       </Container>
       <p>THANK YOU!</p>
       <lottie-player
-        src="https://assets4.lottiefiles.com/temp/lf20_A3XZxc.json"
+        src="https://assets4.lottiefiles.com/packages/lf20_jcqksgfq.json"
         background="transparent"
         speed="1"
-        style={{ width: '300px', height: '300px', margin:'0 auto 0 auto'}}
+        style={{ width: '300px', height: '150px', margin:'0 auto 0 auto'}}
         loop
         autoplay
       ></lottie-player>

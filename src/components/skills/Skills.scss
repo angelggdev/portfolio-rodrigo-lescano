@@ -1,3 +1,9 @@
+@use 'sass:math';
+
+$font-size-h2: 35px;
+$font-size-h3: 30px;
+$font-size-li: 21px;
+
 .sectionSkills{
     text-align: left;
     padding: 0 10vw 10vw 10vw;
@@ -11,7 +17,7 @@
     }
     h2{
         font-weight: bold;
-        font-size: 35px;
+        font-size: $font-size-h2;
         line-height: 44px;
     }
     h3{
@@ -23,7 +29,7 @@
     }
     li{
         font-weight: 300;
-        font-size: 21px;
+        font-size: $font-size-li;
         line-height: 26px;
         margin:20px;
     }
@@ -46,5 +52,24 @@
 @media (max-width:600px) {
     .sectionSkills{
         padding: 0 5vw 10vw 5vw;
+        img{
+            width:80%;
+            left: 42%;
+            top: 91.3%
+        }
+        h2{
+            font-size: math.div($font-size-h2, 1.2);
+        }
+        h3{
+            font-size: math.div($font-size-h3, 1.2);
+        }
+        li{
+            font-size: math.div($font-size-li, 1.2);
+        }
+        .sectionSkills--technologies{
+            ul{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     }
 }
