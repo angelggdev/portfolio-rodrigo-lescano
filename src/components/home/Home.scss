@@ -1,27 +1,38 @@
+@use 'sass:math';
+
+$font-size-h1: 60px;
+$line-height-h1: 75px;
+$font-size-h2: 30px;
+$line-height-h2: 37px;
+$padding-top: 16vh;
+$padding-left: 10vw;
+$font-size-p: 20px;
+$margin-top-p: 15vh;
+
 .homeContainer{
     text-align: left;
     width: 45vw;
-    padding-top: 16vh;
-    padding-left: 10vw;
+    padding-top: $padding-top;
+    padding-left: $padding-left;
     display:flex;
     flex-direction: column;
     color:white;
     h1{
         font-weight: bold;
-        font-size: 60px;
-        line-height: 75px;
+        font-size: $font-size-h1;
+        line-height: $line-height-h1;
     }
     h2{
         font-weight: normal;
-        font-size: 30px;
-        line-height: 37px;
+        font-size: $font-size-h2;
+        line-height: $line-height-h2;
     }
     p{
         font-weight: 500;
-        font-size: 20px;
+        font-size: $font-size-p;
         line-height: 25px;
         text-align: center;
-        margin-top: 15vh;
+        margin-top: $margin-top-p;
     }
     .homeContainer--link{
         align-self: center;
@@ -35,5 +46,24 @@
     }
     50% {
       transform: translateY(-50px);
+    }
+}
+
+@media (max-width: 600px) {
+    .homeContainer{
+        padding-top: math.div($padding-top, 6);
+        padding-left: math.div($padding-left, 1.5);
+        h1{
+            font-size: math.div($font-size-h1, 1.5);
+            line-height: math.div($line-height-h1, 1.5);
+        }
+        h2{
+            font-size: math.div($font-size-h2, 1.2);
+            line-height: math.div($line-height-h2, 1.2);
+        }
+        p{
+            font-size: math.div($font-size-p, 1.2);
+            margin-top: math.div($margin-top-p, 2);
+        }
     }
 }

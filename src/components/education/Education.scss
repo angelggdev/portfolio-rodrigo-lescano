@@ -1,9 +1,13 @@
+@use 'sass:math';
+
+$font-size-h2: 35px;
+
 .sectionEducation{
     padding: 0 10vw 10vw 10vw;
     background: #E8ECF3;
     h2{
         font-weight: bold;
-        font-size: 35px;
+        font-size: $font-size-h2;
         line-height: 44px;
         color: #113149;
         text-align: left;
@@ -62,7 +66,7 @@
     }
     .certificationsTitle{
         font-weight: bold;
-        font-size: 35px;
+        font-size: $font-size-h2;
         line-height: 44px;
         color: black;
     }
@@ -92,8 +96,38 @@
 
 @media (max-width: 600px) {
     .sectionEducation{
+        h2{
+            font-size: math.div($font-size-h2, 1.2);
+        }
         .sectionEducation--edContainer{
             max-width: none;
+            .timeLine{
+                width: 80vw;
+                height: auto;
+            }
+        }
+        .certificationsTitle{
+            font-size: math.div($font-size-h2, 1.2);
+        }
+        .sectionEducation--certificationContainer{
+            margin-bottom: 50px;
+            div{
+                text-align: left;
+            }
+        }
+        .sectionEducation--certificationContainer{
+            flex-direction: column;
+        }
+    }
+}
+
+@media (min-width:601px) and (max-width: 1200px) {
+    .sectionEducation{
+        .sectionEducation--edContainer{
+            .timeLine{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

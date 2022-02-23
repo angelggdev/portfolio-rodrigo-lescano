@@ -1,9 +1,14 @@
+@use 'sass:math';
+
+$font-size-h2:35px;
+
+
 .sectionWorkExp{
     padding: 0 10vw 10vw 10vw;
     background: #DCE0E8;
     h2{
         font-weight: bold;
-        font-size: 35px;
+        font-size: $font-size-h2;
         line-height: 44px;
         color: #113149;
         text-align: left;
@@ -71,8 +76,28 @@
 
 @media (max-width: 600px) {
     .sectionWorkExp{
+        h2{
+            font-size: math.div($font-size-h2, 1.2);
+        }
         .sectionWorkExp--workExpContainer{
             max-width: none;
+            margin-bottom:100px;
         }
+    }
+    .timeLine{
+        width:80vw;
+    }
+}
+
+@media (min-width:601px) and (max-width: 1200px) {
+    .sectionWorkExp{
+        .sectionWorkExp--workExpContainer{
+            max-width: 33%;
+            height: 477px;
+            grid-template-rows: 0.5fr 1fr 2fr 1fr 4fr 1fr;
+        }
+    }
+    .timeLine{
+        width:100%;
     }
 }

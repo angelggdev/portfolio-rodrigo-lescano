@@ -1,10 +1,15 @@
+@use 'sass:math';
+
+$font-size-brand: 25px;
+$height: 18vh;
+
 .navbar{
     background: linear-gradient(180deg, rgba(9, 32, 63, 0.95) 0%, rgba(83, 120, 149, 0.95) 100%);
     position:fixed !important;
     width: 100%;
     padding-bottom: 0;
     background-color: rgba(0,0,0,0) !important;
-    height: 18vh;
+    height: $height;
     z-index: 1;
     align-items: flex-end;
     .container-fluid{
@@ -21,10 +26,16 @@
                 line-height: 27px;
             }
         }
+        .menuButton{
+            display:none !important;
+        }
+        #offcanvasNavbar{
+            display:none !important;
+        }
     }
     .navBar--brand{
         font-weight: bold;
-        font-size: 25px;
+        font-size: $font-size-brand;
         line-height: 31px;
         margin-left: 10vw;
     }
@@ -33,5 +44,38 @@
         background: linear-gradient(180deg, #537895 0%, #09203F 100%);
         width: 100%;
         align-self:flex-end;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar{
+        height: math.div($height,1.5);
+        .container-fluid{
+            .menuButton{
+                display: block !important;
+            }
+            #offcanvasNavbar{
+                display: block !important;
+            }
+            .navBar--links{
+                display:none !important;
+            }
+        }
+        .navBar--brand{
+            font-size: math.div($font-size-brand, 1.2);
+        }
+    }
+    .offcanvas-end{
+        width:50vw;
+    }
+    .offCanvasBody{
+        background-color: #537895;
+        a{
+            text-decoration: none;
+            color:white;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 27px;
+        }
     }
 }
