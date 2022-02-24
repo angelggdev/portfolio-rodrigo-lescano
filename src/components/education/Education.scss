@@ -1,6 +1,8 @@
 @use 'sass:math';
 
 $font-size-h2: 35px;
+$font-size-h4: 22px;
+$font-size-h3: 20px;
 
 .sectionEducation{
     padding: 0 10vw 10vw 10vw;
@@ -13,55 +15,60 @@ $font-size-h2: 35px;
         text-align: left;
         margin-bottom: 64px;
     }
-    .sectionEducation--edContainer{
-        max-width: 50%;
-        height: 400px;
-        display: grid;
-        grid-template-rows: 0.5fr 1fr 2fr 1fr 2.5fr;
-        justify-items: center;
-        padding: 0;
-        .timeLine{
-            width: 558px;
-            height: 25px;
-        }
-        .sectionEducation--edContainer__logo{
-            display:flex; 
-            flex-direction: column; 
-            align-items: center;
-            position:relative;
-            .pin{
-                position:absolute;
-                height: 30px;
-                bottom: 115%;
+    .container-fluid{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .sectionEducation--edContainer{
+            max-width: 50%;
+            height: 400px;
+            display: grid;
+            grid-template-rows: 0.5fr 1fr 2fr 1fr 2.5fr;
+            justify-items: center;
+            padding: 0;
+            .timeLine{
+                width: 558px;
+                height: 25px;
             }
-        }
-        .sectionEducation--edContainer__title{
-            display:flex; 
-            align-items: center;
-            justify-content: center;
-            .pin{
-                margin: 10px;
-                height: 24px;
+            .sectionEducation--edContainer__logo{
+                display:flex; 
+                flex-direction: column; 
+                align-items: center;
+                position:relative;
+                .pin{
+                    position:absolute;
+                    height: 30px;
+                    bottom: 115%;
+                }
             }
-        }
-        h3{
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 25px;
-            text-align: center;
-            margin:0;
-        }
-        h4{
-            font-weight: bold;
-            font-size: 22px;
-            line-height: 27px;
-            text-align: center;
-        }
-        p{
-            font-weight: bold;
-            font-size: 25px;
-            line-height: 31px;
-            color: #537895;
+            .sectionEducation--edContainer__title{
+                display:flex; 
+                align-items: center;
+                justify-content: center;
+                .pin{
+                    margin: 10px;
+                    height: 24px;
+                }
+            }
+            h3{
+                font-weight: 500;
+                font-size: $font-size-h3;
+                line-height: 25px;
+                text-align: center;
+                margin:0;
+            }
+            h4{
+                font-weight: bold;
+                font-size: $font-size-h4;
+                line-height: 27px;
+                text-align: center;
+            }
+            p{
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 31px;
+                color: #537895;
+            }
         }
     }
     .certificationsTitle{
@@ -100,11 +107,19 @@ $font-size-h2: 35px;
         h2{
             font-size: math.div($font-size-h2, 1.2);
         }
-        .sectionEducation--edContainer{
-            max-width: none;
-            .timeLine{
-                width: 80vw;
-                height: auto;
+        .container-fluid{
+            .sectionEducation--edContainer{
+                max-width: none;
+                .timeLine{
+                    width: 80vw;
+                    height: auto;
+                }
+                h3{
+                    font-size: math.div($font-size-h3, 1.2);
+                }
+                h4{
+                    font-size: math.div($font-size-h4, 1.2);
+                }
             }
         }
         .certificationsTitle{
@@ -125,10 +140,19 @@ $font-size-h2: 35px;
 
 @media (min-width:601px) and (max-width: 1200px) {
     .sectionEducation{
-        .sectionEducation--edContainer{
-            .timeLine{
-                width: 100%;
-                height: auto;
+        .container-fluid{
+            .sectionEducation--edContainer{
+                max-width: 350px;
+                .timeLine{
+                    width: auto;
+                    height: auto;
+                }
+                h3{
+                    font-size: math.div($font-size-h3, 1.2);
+                }
+                h4{
+                    font-size: math.div($font-size-h4, 1.2);
+                }
             }
         }
         .sectionEducation--certificationContainer{
