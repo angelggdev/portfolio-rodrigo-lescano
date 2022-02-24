@@ -1,7 +1,7 @@
 @use 'sass:math';
 
-$font-size-h2:35px;
-
+$font-size-h2: 35px;
+$font-size-h4: 22px;
 
 .sectionWorkExp{
     padding: 0 10vw 10vw 10vw;
@@ -12,64 +12,70 @@ $font-size-h2:35px;
         line-height: 44px;
         color: #113149;
         text-align: left;
-        margin-bottom: 64px;
+        margin-bottom: 14px;
     }
-    .sectionWorkExp--workExpContainer{
-        max-width: 33%;
-        height: 430px;
-        display: grid;
-        grid-template-rows: 0.5fr 1fr 2fr 1fr 2.5fr 1fr;
-        justify-items: center;
-        padding: 0;
-        .sectionWorkExp--workExpContainer__logo{
-            display:flex; 
-            flex-direction: column; 
-            align-items: center;
-            position:relative;
-            .pin{
-                position:absolute;
-                height: 30px;
-                bottom: 110%;
+    .container-fluid{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .sectionWorkExp--workExpContainer{
+            max-width: 282px;
+            height: 430px;
+            display: grid;
+            grid-template-rows: 0.5fr 1fr 2fr 1fr 2.5fr 1fr;
+            justify-items: center;
+            padding: 0;
+            margin-top: 50px;
+            .sectionWorkExp--workExpContainer__logo{
+                display:flex; 
+                flex-direction: column; 
+                align-items: center;
+                position:relative;
+                .pin{
+                    position:absolute;
+                    height: 30px;
+                    bottom: 110%;
+                }
             }
-        }
-        .sectionWorkExp--workExpContainer__title{
-            display:flex; 
-            align-items: center;
-            justify-content: center;
-            .pin{
-                margin: 10px;
-                height: 24px;
+            .sectionWorkExp--workExpContainer__title{
+                display:flex; 
+                align-items: center;
+                justify-content: center;
+                .pin{
+                    margin: 10px;
+                    height: 24px;
+                }
             }
-        }
-        button{
-            background: linear-gradient(180deg, #537895 0%, #09203F 100%);
-            border-radius: 20px;
-            width:183px;
-            height:50px;
-            color:white;
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 25px;
-        }
-        h3{
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 25px;
-            text-align: center;
-            margin:0;
-        }
-        h4{
-            font-weight: bold;
-            font-size: 22px;
-            line-height: 27px;
-            text-align: center;
-            padding: 15px;
-        }
-        p{
-            font-weight: bold;
-            font-size: 25px;
-            line-height: 31px;
-            color: #537895;
+            button{
+                background: linear-gradient(180deg, #537895 0%, #09203F 100%);
+                border-radius: 20px;
+                width:183px;
+                height:50px;
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 25px;
+            }
+            h3{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 25px;
+                text-align: center;
+                margin:0;
+            }
+            h4{
+                font-weight: bold;
+                font-size: $font-size-h4;
+                line-height: 27px;
+                text-align: center;
+                padding: 15px;
+            }
+            p{
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 31px;
+                color: #537895;
+            }
         }
     }
 }
@@ -79,9 +85,14 @@ $font-size-h2:35px;
         h2{
             font-size: math.div($font-size-h2, 1.2);
         }
-        .sectionWorkExp--workExpContainer{
-            max-width: none;
-            margin-bottom:100px;
+        .container-fluid{
+            .sectionWorkExp--workExpContainer{
+                max-width: none;
+                margin-bottom:100px;
+                h4{
+                    font-size: math.div($font-size-h4, 1.2);
+                }
+            }
         }
     }
     .timeLine{
@@ -91,10 +102,14 @@ $font-size-h2:35px;
 
 @media (min-width:601px) and (max-width: 1200px) {
     .sectionWorkExp{
-        .sectionWorkExp--workExpContainer{
-            max-width: 33%;
-            height: 477px;
-            grid-template-rows: 0.5fr 1fr 2fr 1fr 4fr 1fr;
+        .container-fluid{
+            .sectionWorkExp--workExpContainer{
+                height: 477px;
+                grid-template-rows: 0.5fr 1fr 2fr 1fr 4fr 1fr;
+                h4{
+                    font-size: math.div($font-size-h4, 1.2);
+                }
+            }
         }
     }
     .timeLine{
