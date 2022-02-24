@@ -5,9 +5,23 @@ import Coder from '../../assets/education/coder.png';
 import FirstItem from '../../assets/work-experience/time-line/first-item.png';
 import Item from '../../assets/work-experience/time-line/item.png';
 import Cisco from '../../assets/education/certifications/cisco.png';
+import { getEducation } from '../../service/firebase';
 import './Education.scss';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 function Education() {
+  const [education, setEducation] = useState();
+  const [loading, setLoading] = useState();
+
+  console.log(education)
+
+  useEffect(() => {
+    getEducation()
+      .then(res => setEducation(res))
+      .then(res => console.log(education));
+  }, [])
+
   return (
     <section className="sectionEducation">
       <h2>EDUCATION</h2>
