@@ -77,6 +77,7 @@ $font-size-h2: 35px;
         border-radius: 20px;
         padding: 19px;
         box-shadow: 0px -4px 20px rgba(19, 50, 74, 0.26);
+        margin: 20px 0 20px 0;
         div{
             text-align: justify;
             display: flex;
@@ -111,12 +112,13 @@ $font-size-h2: 35px;
         }
         .sectionEducation--certificationContainer{
             margin-bottom: 50px;
+            flex-direction: column;
             div{
                 text-align: left;
             }
-        }
-        .sectionEducation--certificationContainer{
-            flex-direction: column;
+            img{
+                align-self: center;
+            }
         }
     }
 }
@@ -127,6 +129,16 @@ $font-size-h2: 35px;
             .timeLine{
                 width: 100%;
                 height: auto;
+            }
+        }
+        .sectionEducation--certificationContainer{
+            margin-bottom: 50px;
+            flex-direction: column;
+            div{
+                text-align: left;
+            }
+            img{
+                align-self: center;
             }
         }
     }

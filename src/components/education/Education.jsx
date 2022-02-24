@@ -69,6 +69,7 @@ function Education() {
               <img
                 src={cert.logoUrl}
                 alt={cert.title}
+                style={{maxWidth: '300px'}}
               />
               <div>
                 <h3>{cert.title}</h3>
