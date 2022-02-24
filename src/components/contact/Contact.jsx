@@ -13,12 +13,35 @@ function Contact() {
   return (
     <section id="contact" className="sectionContact">
       <h2>CONTACT ME</h2>
-      <IoLogoWhatsapp size={'80px'} />
-      <IoLogoLinkedin size={'80px'} />
-      <IoLogoGithub size={'80px'} />
-      <IoMdMail size={'80px'} />
+      <a 
+        href="https://wa.me/5491123989468"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IoLogoWhatsapp size={'80px'} />
+      </a>
+      <a 
+        href="https://www.linkedin.com/in/rodrigo-lescano-b66333b0/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IoLogoLinkedin size={'80px'} />
+      </a>
+      <a 
+        href="https://www.github.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IoLogoGithub size={'80px'} />
+      </a>
+      <a 
+        href='mailto:angelggdev@gmail.com'
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <IoMdMail size={'80px'} />
+      </a>
       <h3>Complete the form and I will contact you!</h3>
-      {/* cambiar email por email de rodrigo */}
       <Container
         fluid
         as={Form}

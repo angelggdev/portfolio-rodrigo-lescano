@@ -41,7 +41,6 @@ function AboutMe() {
                 href="https://www.linkedin.com/in/rodrigo-lescano-b66333b0/"
                 target="_blank"
                 rel="noopener noreferrer"
-                download
               >
                 DOWNLOAD CV
               </a>
