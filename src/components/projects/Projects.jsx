@@ -1,29 +1,44 @@
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { getProjects } from '../../service/firebase';
+import { Spinner } from 'react-bootstrap';
 import './Projects.scss';
 
 function Projects() {
+  const [projects, setProjects] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getProjects()
+      .then(res => setProjects(res))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false));
+  }, [projects])
+
   return (
     <section id="projects" className="sectionProjects">
       <h2>PROJECTS</h2>
-      <div className="sectionProjects--project">
-        {/* <img src="#" alt=""/> */}
-        <h3>PROJECT 1</h3>
-        <h4>In process. Available soon.</h4>
-        <h4>
-          I'm still working on my personal project, but I'll be posting all the
-          details here as soon as possible. Thank you!
-        </h4>
-        <button>VIEW WEBSITE</button>
-      </div>
-      <div className="sectionProjects--project">
-        {/* <img src="#" alt=""/> */}
-        <h3>PROJECT 2</h3>
-        <h4>In process. Available soon.</h4>
-        <h4>
-          I'm still working on my personal project, but I'll be posting all the
-          details here as soon as possible. Thank you!
-        </h4>
-        <button>VIEW WEBSITE</button>
-      </div>
+      {
+        !loading?
+        projects.map((project, i) => {
+          return(
+            <div key={i} className="sectionProjects--project">
+              <h3>{project.title}</h3>
+              <h4>{project.date}</h4>
+              <h4>
+                {project.description}
+              </h4>
+              <div className="sectionProjects--project__link">
+                <a href={project.url}>VIEW WEBSITE</a>
+              </div>
+            </div>
+          )
+        })
+        :
+        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height:'50vh'}}>
+          <Spinner animation="grow" />
+        </div>
+      }
     </section>
   );
 }
