@@ -28,14 +28,14 @@ function Contact() {
         <IoLogoLinkedin size={'80px'} />
       </a>
       <a 
-        href="https://www.github.com/"
+        href="https://github.com/rlescano20"
         target="_blank"
         rel="noopener noreferrer"
       >
         <IoLogoGithub size={'80px'} />
       </a>
       <a 
-        href='mailto:angelggdev@gmail.com'
+        href='mailto:rodrilescano@gmail.com'
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -45,7 +45,7 @@ function Contact() {
       <Container
         fluid
         as={Form}
-        action="https://formsubmit.co/angelggdev@gmail.com"
+        action="https://formsubmit.co/rodrilescano@gmail.com"
         method="POST"
       >
         <Row className="mb-3">
