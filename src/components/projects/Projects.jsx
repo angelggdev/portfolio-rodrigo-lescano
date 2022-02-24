@@ -13,7 +13,7 @@ function Projects() {
       .then(res => setProjects(res))
       .catch(err => console.log(err))
       .finally(() => setLoading(false));
-  }, [projects])
+  }, [])
 
   return (
     <section id="projects" className="sectionProjects">

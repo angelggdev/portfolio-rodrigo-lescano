@@ -20,14 +20,14 @@ function Education() {
       .then(res => setEducation(res))
       .catch(err => console.log(err))
       .finally(() => setLoadingEducation(false));
-  }, [education])
+  }, [])
 
   useEffect(() => {
     getCertifications()
       .then(res => setCertifications(res))
       .catch(err => console.log(err))
       .finally(() => setLoadingCertifications(false));
-  }, [certifications])
+  }, [])
 
   return (
     <section className="sectionEducation">
