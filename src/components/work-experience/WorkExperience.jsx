@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaMapPin } from 'react-icons/fa';
-import Item from '../../assets/work-experience/time-line/item.png';
+import Item from '../../assets/time-line/item.png';
 import { Container } from 'react-bootstrap';
 import DetailsModal from './details-modal/DetailsModal';
 import { getWorkExperiences } from '../../service/firebase';

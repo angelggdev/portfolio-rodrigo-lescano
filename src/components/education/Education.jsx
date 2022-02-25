@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 import { FaMapPin } from 'react-icons/fa';
-import Item from '../../assets/work-experience/time-line/item.png';
+import Item from '../../assets/time-line/item.png';
 import { getEducation, getCertifications } from '../../service/firebase';
 import { useState } from 'react';
 import { useEffect } from 'react';
